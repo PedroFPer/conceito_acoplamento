@@ -44,6 +44,8 @@ nav{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    margin-bottom: 2%;
 }
 
 
@@ -59,15 +61,15 @@ main button{
 
 #formCadastro{
     width: 65%;
-    display: flex;
+    display: none;
         justify-content: center;
         align-items: center;
         flex-direction: column;
 
-    margin-top: 2%;
 
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 0px 0px 10px 10px;
+    border-top: none;
 
     padding: 2%;
 }
@@ -93,6 +95,58 @@ main button{
 
     margin-top: 2%;
 }
+
+#tabelLanc{
+    width: 69%;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    
+    
+    border: 1px solid black;
+    border-radius: 0px 0px 10px 10px;
+    border-top: none;
+    
+    padding: 2%;
+    
+}
+
+#tabelLanc thead{
+    width: 100%;
+}
+
+
+tbody{
+    width: 100%;
+}
+
+.linhaTabela{
+    width: 100%;
+
+    display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+
+}
+
+#tabelLanc th{
+    width: 30%;
+
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+.celulaTabela{
+    width: 30%;
+    height: 1em;
+
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+
 
 footer{
 

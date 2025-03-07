@@ -20,7 +20,7 @@
             <div class="menuHamburger">
                 <button id="btnCadas">1.Cadastra Lanche</button>
 
-                <form id="formCadastro">
+                <form id="formCadastro" >
                     <label for="codigo">Codigo: </label>
                     <input type="text" name="inputCodigo" id="inputCodigo">
 
@@ -35,6 +35,25 @@
 
                     <button id="btnCadastraLanche"> Cadastra Lanche</button>
                 </form>
+            </div>
+
+            <div class="menuHamburger">
+                <button id="btnListarLanche">2.Listar Lanche</button>
+                
+                <table id="tabelLanc">
+                    <thead>
+                        <tr class="linhaTabela">
+                            <th>Codigo</th>
+                            <th>Nome do lanche</th>
+                            <th>Preço</th>
+                            <th>Imagem</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bodyLisLanc">
+
+                    </tbody>
+                </table>
+
             </div>
         </nav>
     </main>
