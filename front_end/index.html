@@ -20,7 +20,7 @@
             <div class="menuHamburger">
                 <button id="btnCadas">1.Cadastra Lanche</button>
 
-                <form id="formCadastro" >
+                <form id="formCadastro" class="formGeneric" >
                     <label for="codigo">Codigo: </label>
                     <input type="text" name="inputCodigo" id="inputCodigo">
 
@@ -33,7 +33,7 @@
                     <label for="imgLanche">Imagem do Lanche: </label>
                     <input type="text" name="inputImgLanche" id="inputImgLanche">
 
-                    <button id="btnCadastraLanche"> Cadastra Lanche</button>
+                    <button id="btnCadastraLanche" class="btnGener"> Cadastra Lanche</button>
                 </form>
             </div>
 
@@ -53,8 +53,60 @@
 
                     </tbody>
                 </table>
-
             </div>
+
+            <div class="menuHamburger">
+                <button id="btnCalculLan">3.Calcular Lanche</button>
+
+                <form id="formCalcLanche" class="formGeneric">
+                    <label>Digite o codigo do Lanche: </label>
+                    <input type="text" id="inputCodi">
+
+                    <label>Digite a quantidade</label>
+                    <input type="text" id="inputQua">
+
+                    <label>Valor total: </label>
+                    <output id="outValorTot"></output>
+
+                    <button id="btnEfetCalc" class="btnGener">Fazer calculo</button>
+                </form>
+            
+            </div>
+
+            <div class="menuHamburger">
+                <button id="btnExcluirLan">4.Excluir Lanche</button>
+            
+                <form id="formExcluirLanche" class="formGeneric">
+                    <label>Digite o codigo do Lanche: </label>
+                    <input type="text" id="inputCodiExclu">
+            
+                    <button id="btnExcluitLanc" class="btnGener">Excluir Lanche</button>
+                </form>
+            
+            </div>
+
+            <div class="menuHamburger">
+                <button id="btnAtulizarLan">5.Atualizar Lanche</button>
+            
+                <form id="formAtuaLanche" class="formGeneric">
+                    <label>Digite o codigo do Lanche: </label>
+                    <input type="text" id="inputCodiAtua">
+
+                    <label for="nomeLanche">Nome do Lanche: </label>
+                    <input type="text" name="inputNomeLancheAtua" id="inputNomeLancheAtua">
+                    
+                    <label for="precoLanche">Preço do Lanche: </label>
+                    <input type="text" name="inputPrecoLancheAtua" id="inputPrecoLancheAtua">
+                    
+                    <label for="imgLanche">Imagem do Lanche: </label>
+                    <input type="text" name="inputImgLancheAtua" id="inputImgLancheAtua">
+            
+                    <button id="btnAtualizar" class="btnGener">Atualizar Lanche</button>
+                </form>
+            
+            </div>
+
+
         </nav>
     </main>
     <footer>

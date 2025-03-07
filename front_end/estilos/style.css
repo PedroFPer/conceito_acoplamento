@@ -12,18 +12,25 @@ body{
 
 
 header{
-
-}
-
-
-main{
-    width: 80%;
-    height: 100vh;
+    margin-bottom: 2%;
 
     display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+}
+
+
+main{
+    width: 80%;
+    flex: 1;
+
+    display: flex;
+        justify-content: top;
+        align-items: center;
+        flex-direction: column;
+
+    overflow: auto;
 
 }
 
@@ -57,24 +64,23 @@ main button{
     font-size: 1.2em;
 }
 
-
-
-#formCadastro{
+.formGeneric{
     width: 65%;
-    display: none;
+        display: none;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-
-
-    border: 1px solid black;
-    border-radius: 0px 0px 10px 10px;
-    border-top: none;
-
-    padding: 2%;
+    
+    
+        border: 1px solid black;
+        border-radius: 0px 0px 10px 10px;
+        border-top: none;
+    
+        padding: 2%;
 }
 
-#formCadastro label{
+
+.formGeneric label{
     width: 90%;
 
     text-align: start;
@@ -82,19 +88,13 @@ main button{
     margin: 1% 0 1% 0;
 }
 
-#formCadastro input{
+.formGeneric input{
     width: 90%;
     height: 3em;
+
+    padding-left: 1%;
 }
 
-#btnCadastraLanche{
-    width: 20%;
-    height: 3em;
-    
-    font-size: 1em;
-
-    margin-top: 2%;
-}
 
 #tabelLanc{
     width: 69%;
@@ -146,7 +146,27 @@ tbody{
     border: 1px solid black;
 }
 
+.btnGener{
+    width: 20%;
+    height: 3em;
+    
+    font-size: 1em;
+    
+    margin-top: 2%;
+}
 
+#outValorTot{
+    width: 90%;
+    height: 2.5em;
+
+    display: flex;
+        align-items: center;
+
+    border: 1px solid black;
+
+    padding-left: 1%;
+    text-align: center;
+}
 
 footer{
 

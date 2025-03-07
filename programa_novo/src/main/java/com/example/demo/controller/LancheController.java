@@ -67,33 +67,42 @@ public class LancheController {
     }
 
     @DeleteMapping("/excluirLanche/{cod}")
-    public void excluir(@PathVariable Integer cod){
+    public ResponseEntity<?> excluir(@PathVariable Integer cod){
         if(cod == null){
             throw new IllegalArgumentException("Os parâmetros são obrigatórios!");
         }
 
         this.lancheApplication.remover(cod);
+
+        return ResponseEntity.noContent().build();
+
     }
 
-    @PatchMapping("/atualizarLanche/{cod}")
-    public void atualizarLanche(@PathVariable Integer cod, @RequestBody Lanche lancheAtualiz){
-        if(cod == null){
+    @PutMapping("/atualizarLanche/{cod}")
+    public ResponseEntity<Lanche> atualizarLanche(@PathVariable Integer cod, @RequestBody Lanche lancheAtualiz) {
+        if (cod == null) {
             throw new IllegalArgumentException("Os parâmetros são obrigatórios!");
-        }else{
+        }
 
-            Lanche lancheExist = lancheFacade.buscarPorCodigo(cod);
+        Lanche lancheExist = lancheFacade.buscarPorCodigo(cod);
 
-            if(lancheAtualiz.getNome() != null){
-                lancheExist.setNome(lancheAtualiz.getNome());
-            }
+        if (lancheExist == null) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
 
-            if(lancheAtualiz.getPreco() != null){
-                lancheExist.setPreco(lancheAtualiz.getPreco());
-            }
+        if (lancheAtualiz.getNome() != null) {
+            lancheExist.setNome(lancheAtualiz.getNome());
+        }
 
-            if(lancheAtualiz.getImagem() != null){
-                lancheExist.setImagem(lancheAtualiz.getImagem());
-            }
+        if (lancheAtualiz.getPreco() != null) {
+            lancheExist.setPreco(lancheAtualiz.getPreco());
+        }
+
+        if (lancheAtualiz.getImagem() != null) {
+            lancheExist.setImagem(lancheAtualiz.getImagem());
+        }
+
+        return ResponseEntity.status(HttpStatus.OK).body(lancheExist);
     }
-    }
+
 }
