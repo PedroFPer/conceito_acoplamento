@@ -3,10 +3,10 @@ package com.example.demo.entities;
 public class Lanche {
     private int codigo;
     private String nome;
-    private double preco;
+    private Double preco;
     private String imagem;
 
-    public Lanche(int codigo, String nome, double preco, String imagem) {
+    public Lanche(int codigo, String nome, Double preco, String imagem) {
         this.codigo = codigo;
         this.nome = nome;
         this.preco = preco;
@@ -29,11 +29,11 @@ public class Lanche {
         this.nome = nome;
     }
 
-    public double getPreco() {
+    public Double getPreco() {
         return preco;
     }
 
-    public void setPreco(double preco) {
+    public void setPreco(Double preco) {
         this.preco = preco;
     }
 
