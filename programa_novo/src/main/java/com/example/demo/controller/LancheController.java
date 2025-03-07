@@ -6,6 +6,7 @@ import com.example.demo.facade.LancheFacade;
 import com.example.demo.repositories.LancheRepository;
 import com.example.demo.services.LancheService;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
@@ -39,8 +40,9 @@ public class LancheController {
     }
 
     @PostMapping("/cadastrar")
-    public void cadastra(@RequestBody Lanche lanche){
+    public ResponseEntity<Lanche> cadastra(@RequestBody Lanche lanche){
         lancheFacade.cadastrar(lanche);
+        return ResponseEntity.status(HttpStatus.CREATED).body(lanche);
     }
 
     @GetMapping("/listarLanche")
